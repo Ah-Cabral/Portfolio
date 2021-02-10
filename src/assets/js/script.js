@@ -1,3 +1,3 @@
-function mudarHeader(background,colorLink, colorContact){
-    
+function changeHeader(cor1,cor2){
+   
 }
