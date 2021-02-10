@@ -17,6 +17,7 @@
     margin: 0;
     font-family: var(--font-primary);
     text-decoration: none;
+    list-style: none;
 }
 
 /* personalizar a barra em geral, aqui estou definindo 10px de largura para a barra vertical
@@ -66,6 +67,10 @@ background: var(--color-secondary);
     width: 85px;
     height: 85px;
     margin-left: 1em;
+}
+
+#links-header{
+    display: flex;
 }
 
 /*Configurando Links*/
