@@ -8,45 +8,36 @@
     <link rel="stylesheet" href="src/assets/css/style.css">
 </head>
 <!--Função para mudar cor da header-->
-<body onscroll="changeHeader()">
+<body >
     <div id="container">
+        <header id="first-header">
+            <div class="img-header">
+                <a href="#home-section">
+                    <img src="src/assets/img/logo-header.png" alt="" id="logo-header">
+                </a>
+            </div>
+            <ul id="links-header">
+                <li><a href="">Home</a></li>
+                <li><a href="">About Me</a></li>
+                <li><a href="">Skills</a></li>
+                <li><a href="">Works</a></li>
+            </ul>
+            <div id="link-contact">
+                <a href="">Contact</a>
+            </div>
+        </header>
+
         <section id="home-section">
-            <header id="first-header">
-                <div class="img-header">
-                    <a href="#home-section">
-                        <img src="src/assets/img/logo-header.png" alt="" id="logo-header">
-                    </a>
+            <div id="content-home">
+                <div id="div-texto">
+                    <h1 id="texto-home">Olá, Meu nome é</h1> 
                 </div>
-                <ul id="links-header">
-                    <li><a href="">Home</a></li>
-                    <li><a href="">About Me</a></li>
-                    <li><a href="">Skills</a></li>
-                    <li><a href="">Works</a></li>
-                </ul>
-                <div id="link-contact">
-                    <a href="">Contact</a>
-                </div>
-            </header>
+                <a href="" class="about-me">About Me</a>
+            </div>
         </section>
-        <section id="home-section">
-            <header id="first-header">
-                <div class="img-header">
-                    <a href="#home-section">
-                        <img src="src/assets/img/logo-header.png" alt="" id="logo-header">
-                    </a>
-                </div>
-                <div id="links-header">
-                    <a href="">Home</a>
-                    <a href="">About Me</a>
-                    <a href="">Skills</a>
-                    <a href="">Works</a>
-                </div>
-                <div id="link-contact">
-                    <a href="">Contact</a>
-                </div>
-            </header>
-        </section>
+
     </div>
+
     <script src="src/assets/js/script.js"></script>
 </body>
 </html>

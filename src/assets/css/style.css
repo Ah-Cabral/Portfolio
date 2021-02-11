@@ -25,11 +25,11 @@ e 10px de altura para a barra horizontal */
 ::-webkit-scrollbar {
     width:10px;
     height: 10px;
-    }
+}
      
 /* aqui é para personalizar o fundo da barra, neste caso estou colocando um fundo cinza escuro*/
 ::-webkit-scrollbar-track {
-background:#333;
+background:rgb(143, 143, 143);
 }
      
 /* aqui é a alça da barra, que demonstra a altura que você está na página
@@ -49,6 +49,10 @@ background: var(--color-secondary);
     height: 100vh;
     background: url(../img/bg-home.jpg);
     background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
 }
 
 /*Configurando Header Principal*/
@@ -100,4 +104,39 @@ background: var(--color-secondary);
     color: var(--color-secondary);
     background: var(--color-primary);
     transition: all .25s;
+}
+
+#texto-home{
+    color: var(--color-primary);
+    font-size: 2em;
+}
+
+#div-texto{
+    margin-bottom: 2em;
+}
+
+#texto-home:after{
+    content: '|';
+    margin-left: 5px;
+    opacity: 1;
+    animation: pisca .7s infinite;
+}
+   
+@keyframes pisca{
+    0%, 100%{
+       opacity: 1;
+    }
+    50%{
+       opacity: 0;
+    }
+}
+
+.about-me{
+    padding: 1em 2em;
+    color: var(--color-primary);
+    background-color: var(--color-secondary);
+}
+
+#second-text{
+    color: var(--color-secondary);
 }
