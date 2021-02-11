@@ -1,9 +1,12 @@
 function digitaTexto(elemento){
-    const textoArray = elemento.innerHTML.split('');
-    elemento.innerHTML = '';
+    const textoArray = elemento.innerText.split('');
+
+    
+
     textoArray.forEach((letra, i) => {
-      setTimeout(() => elemento.innerHTML += letra, 75 * i);
+      setTimeout(() => elemento.innerText += letra, 75 * i);
     });
+
 };
 
 const titulo = document.querySelector('h1');

@@ -135,6 +135,7 @@ background: var(--color-secondary);
     padding: 1em 2em;
     color: var(--color-primary);
     background-color: var(--color-secondary);
+    border-radius: 5px;
 }
 
 #second-text{
