@@ -1,14 +1,37 @@
-function digitaTexto(elemento){
-    const textoArray = elemento.innerText.split('');
+// function digitaTexto(elemento){
 
-    
+//   const textoArray = elemento.innerText.split('');
 
-    textoArray.forEach((letra, i) => {
-      setTimeout(() => elemento.innerText += letra, 75 * i);
-    });
+//   elemento.innerHTML = '';
 
-};
+//   textoArray.forEach((letra, i) => {
+//     setTimeout(() => elemento.innerText += letra, 75 * i);
+//   });
 
-const titulo = document.querySelector('h1');
-digitaTexto(titulo);
+//   for(c = 0 ; c < textoArray.length ; c++){
+//     setTimeout(() => textoArray.pop(), 75 * c)
+//     console.log(textoArray)
+//   }
+  
+// };
 
+// const titulo = document.querySelector('#texto-home');
+// digitaTexto(titulo);
+
+const typewriter = document.querySelector("#typewriter");
+
+const sentences = ["Olá, Pedro", "Olá, Arthur", "Olá, Dev", "Olá, Designer","Olá, Tudo"]
+
+function updateText(arrayText) {
+  typewriter.innerHTML = "";
+  
+  let pos = 0;
+  let limit = arrayText.length;
+
+    setInterval(() => {
+      typewriter.innerHTML = `<h1 id="texto-home">${arrayText[pos]}</h1>`
+       pos++
+     }, 2000)
+  }
+
+updateText(sentences)
