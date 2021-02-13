@@ -120,6 +120,7 @@ estou colocando uma cor azul clara nela*/
 .typing{
     position: relative;
     margin-left: 10px;
+    text-align: center;
 }
 
 .typing::after{

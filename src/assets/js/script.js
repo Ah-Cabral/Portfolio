@@ -1,26 +1,18 @@
-function Type(){
-    const texts = ['Olá, meu nome é Arthur Cabral', 'Sou desenvolvedor iniciante', 'Sou Designer', "Sou estudante"];
-    let count = 0;
-    let index = 0;
-    let currentText = '';
-    let letter = '';
+const texts = ['Olá, meu nome é Arthur Cabral...', 'Sou desenvolvedor iniciante...', 'Sou Designer...', 'Sou estudante...'];
+function Type(count){
+    let phrase = texts[count];
+    let letters = phrase.split('');
+    let h1 = document.querySelector('.typing');
+    letters.forEach((letras, i) => {
+        setTimeout(function() {
+            h1.innerHTML += letras;
+            console.log(letters.length)
+        }, 100 * i);
+    });
 
-    (function typing(){
-        if(count === texts.length){
-            count = 0;
-        };
-        currentText = texts[count];
-        letter = currentText.slice(0, ++index);
-        
-        document.querySelector('.typing').textContent = letter;
-        if(letter.length === currentText.length){
-            count++;
-        };
-        
-    }());
+
+    
 };
 
-Type();
-
-
+Type(0)
 
