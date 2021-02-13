@@ -106,6 +106,8 @@ estou colocando uma cor azul clara nela*/
     transition: all 0.25s;
 }
 
+/*Div introdutória do site*/
+
 #intro {
     display: flex;
     flex-direction: column;
@@ -113,16 +115,20 @@ estou colocando uma cor azul clara nela*/
     color: var(--color-primary);
 }
 
+/*Div introdutória do site*/
 .text-home{
     display: flex;
 }
 
+/*H1 Contendo as frases*/
 .typing{
     position: relative;
     margin-left: 10px;
     text-align: center;
+    font-size: 2rem;
 }
 
+/*Inserindo Pseudo-Elementos*/
 .typing::after{
     content: "";
     position: absolute;
@@ -132,6 +138,7 @@ estou colocando uma cor azul clara nela*/
     animation: piscando 0.75s infinite ease;
 }
 
+/*Keyframe para o elemento*/
 @keyframes piscando{
     0%{
         opacity: 0;
@@ -141,6 +148,7 @@ estou colocando uma cor azul clara nela*/
     }
 }
 
+/*Link da About Me*/
 .about-me {
     padding: 1rem 2rem;
     color: var(--color-primary);
