@@ -1,37 +1,34 @@
-// function digitaTexto(elemento){
+let typed = "";
+const element = document.querySelector(".typity");
 
-//   const textoArray = elemento.innerText.split('');
+function startType(phrases, index) {
+    if (index < phrases.length) {
+        typed += phrases.charAt(index);
+        element.innerHTML = typed;
+        index++;
+        setTimeout(function () {
+            startType(phrases, index);
+        }, 50);
+    } else {
+        setTimeout(function () {
+            element.classList.add("highlight");
+        }, 2000);
 
-//   elemento.innerHTML = '';
+        setTimeout(function () {
+            element.classList.remove("highlight");
+            typed = "";
+            element.innerHTML = typed;
+            startType(getPhrase(), 0);
+        }, 2850);
+    }
+}
 
-//   textoArray.forEach((letra, i) => {
-//     setTimeout(() => elemento.innerText += letra, 75 * i);
-//   });
+function getPhrase() {
+    const phrases = ["Olá, meu nome é Arthur Cabral", "desenvolvedor web", "criativo", "líder", "proativo"];
+    for(c = 0; c < phrases.length + 1; c++){
+        var newPhrase = [phrases[c]];
+        return newPhrase[c];
+    }
+}
 
-//   for(c = 0 ; c < textoArray.length ; c++){
-//     setTimeout(() => textoArray.pop(), 75 * c)
-//     console.log(textoArray)
-//   }
-  
-// };
-
-// const titulo = document.querySelector('#texto-home');
-// digitaTexto(titulo);
-
-const typewriter = document.querySelector("#typewriter");
-
-const sentences = ["Olá, Pedro", "Olá, Arthur", "Olá, Dev", "Olá, Designer","Olá, Tudo"]
-
-function updateText(arrayText) {
-  typewriter.innerHTML = "";
-  
-  let pos = 0;
-  let limit = arrayText.length;
-
-    setInterval(() => {
-      typewriter.innerHTML = `<h1 id="texto-home">${arrayText[pos]}</h1>`
-       pos++
-     }, 2000)
-  }
-
-updateText(sentences)
+startType(getPhrase(), 0);

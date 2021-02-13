@@ -5,135 +5,183 @@
 
 /*Criando variáveis para as fontes*/
 :root {
-  --font-primary: "Poppins", serif;
-  --font-secondary: "Montserrat", sans-serif;
-  --color-primary: #ffffff;
-  --color-secondary: #ffb039;
+    --font-primary: "Poppins", serif;
+    --font-secondary: "Montserrat", sans-serif;
+    --color-primary: #ffffff;
+    --color-secondary: #ffb039;
 }
 
 /*Configuração base*/
 * {
-  padding: 0;
-  margin: 0;
-  font-family: var(--font-primary);
-  text-decoration: none;
-  list-style: none;
+    padding: 0;
+    margin: 0;
+    font-family: var(--font-primary);
+    text-decoration: none;
+    list-style: none;
 }
 
 /* personalizar a barra em geral, aqui estou definindo 10px de largura para a barra vertical
 e 10px de altura para a barra horizontal */
 ::-webkit-scrollbar {
-  width: 10px;
-  height: 10px;
+    width: 10px;
+    height: 10px;
 }
 
 /* aqui é para personalizar o fundo da barra, neste caso estou colocando um fundo cinza escuro*/
 ::-webkit-scrollbar-track {
-  background: rgb(143, 143, 143);
+    background: rgb(143, 143, 143);
 }
 
 /* aqui é a alça da barra, que demonstra a altura que você está na página
 estou colocando uma cor azul clara nela*/
 ::-webkit-scrollbar-thumb {
-  background: var(--color-secondary);
+    background: var(--color-secondary);
 }
 
 /*Alça da barra em evento de click*/
 ::-webkit-scrollbar-thumb:active {
-  background: var(--color-primary);
+    background: var(--color-primary);
 }
 
 /*Configurando Home*/
 #home-section {
-  width: 100%;
-  height: 100vh;
-  background: url(../img/bg-home.jpg);
-  background-size: cover;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
+    width: 100%;
+    height: 100vh;
+    background: url(../img/bg-home.jpg);
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
 }
 
 /*Configurando Header Principal*/
 #first-header {
-  width: 100%;
-  height: 75px;
-  background-color: rgba(0, 0, 0, 0.199);
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  position: fixed;
+    width: 100%;
+    height: 75px;
+    background-color: rgba(0, 0, 0, 0.199);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
 }
 
 /*Configurando posicionamento do Logo*/
 #logo-header {
-  width: 85px;
-  height: 85px;
-  margin-left: 1em;
+    width: 85px;
+    height: 85px;
+    margin-left: 1em;
 }
 
 #links-header {
-  display: flex;
+    display: flex;
 }
 
 /*Configurando Links*/
 #links-header a {
-  color: var(--color-primary);
-  margin: 1em;
+    color: var(--color-primary);
+    margin: 1em;
 }
 
 /*Configurando Links em evento de hover*/
 #links-header a:hover {
-  color: var(--color-secondary);
-  margin: 1em;
-  transition: all 0.25s;
+    color: var(--color-secondary);
+    margin: 1em;
+    transition: all 0.25s;
 }
 
 /*Configurando link de contato*/
 #link-contact a {
-  color: var(--color-primary);
-  margin-right: 2em;
-  padding: 0.5em;
-  border-radius: 5px;
-  background: var(--color-secondary);
+    color: var(--color-primary);
+    margin-right: 2em;
+    padding: 0.5em;
+    border-radius: 5px;
+    background: var(--color-secondary);
 }
 
 /*Configurando link de contato em evento de header*/
 #link-contact a:hover {
-  color: var(--color-secondary);
-  background: var(--color-primary);
-  transition: all 0.25s;
+    color: var(--color-secondary);
+    background: var(--color-primary);
+    transition: all 0.25s;
 }
 
 #texto-home {
-  color: var(--color-primary);
-  font-size: 2em;
+    color: var(--color-primary);
+    font-size: 2em;
 }
 
-#typewriter {
-  overflow: hidden; 
-  border-right: 0.15em solid var(--color-secondary);
-  white-space: nowrap; 
-  margin: 0 auto 2rem auto; 
-  letter-spacing: 0.15em;
-  /* animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite; */
+#typewriter-container {
+    padding: 2rem 0;
 }
 
-
-@keyframes typing {
-  from { width: 0 }
-  to { width: 100% }
+#typewriter-container h1 {
+    color: white;
+    font-size: 2rem;
+    font-weight: lighter;
+    display: inline-block;
+    margin-right: 0.5rem;
 }
 
-@keyframes blink-caret {
-  from, to { border-color: transparent }
-  50% { border-color: orange; }
+.typity {
+    background-position: 0% 100%;
+    box-sizing: border-box;
+    color: white;
+    font-size: 2rem;
+    padding-right: 2px;
+    position: relative;
+    transition: background-position 1s;
+}
+
+.typity::after {
+    animation: blink-cursor 0.75s step-end infinite;
+    background-color: transparent;
+    content: "";
+    display: block;
+    height: 2rem;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 2px;
+}
+
+.typity.highlight {
+    background-image: linear-gradient(
+        to left,
+        rgba(255, 255, 255, 0.2) 50%,
+        transparent 50%
+    );
+    background-position: 100% 100%;
+    background-repeat: no-repeat;
+    background-size: 200% 2rem;
+}
+
+.typity.hightlight::after {
+    animation: none;
+}
+
+@keyframes blink-cursor {
+    0% {
+        background-color: transparent;
+    }
+    50% {
+        background-color: var(--color-secondary);
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    html {
+        font-size: 12px;
+    }
+
+    .typity {
+        border-bottom: 2px solid red;
+    }
 }
 
 .about-me {
-  padding: 1em 2em;
-  color: var(--color-primary);
-  background-color: var(--color-secondary);
-  border-radius: 5px;
+    padding: 1em 2em;
+    color: var(--color-primary);
+    background-color: var(--color-secondary);
+    border-radius: 5px;
 }
