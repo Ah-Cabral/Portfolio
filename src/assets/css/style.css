@@ -70,7 +70,7 @@ estou colocando uma cor azul clara nela*/
 #logo-header {
     width: 85px;
     height: 85px;
-    margin-left: 1em;
+    margin-left: 1rem;
 }
 
 #links-header {
@@ -80,21 +80,21 @@ estou colocando uma cor azul clara nela*/
 /*Configurando Links*/
 #links-header a {
     color: var(--color-primary);
-    margin: 1em;
+    margin: 1rem;
 }
 
 /*Configurando Links em evento de hover*/
 #links-header a:hover {
     color: var(--color-secondary);
-    margin: 1em;
+    margin: 1rem;
     transition: all 0.25s;
 }
 
 /*Configurando link de contato*/
 #link-contact a {
     color: var(--color-primary);
-    margin-right: 2em;
-    padding: 0.5em;
+    margin-right: 2rem;
+    padding: 0.5rem;
     border-radius: 5px;
     background: var(--color-secondary);
 }
@@ -106,14 +106,44 @@ estou colocando uma cor azul clara nela*/
     transition: all 0.25s;
 }
 
-#texto-home {
+#intro {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     color: var(--color-primary);
-    font-size: 2em;
+}
+
+.text-home{
+    display: flex;
+}
+
+.typing{
+    position: relative;
+    margin-left: 10px;
+}
+
+.typing::after{
+    content: "";
+    position: absolute;
+    width: 1px;
+    height: 100%;
+    border-right: 2px solid var(--color-secondary);
+    animation: piscando 0.75s infinite ease;
+}
+
+@keyframes piscando{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
 }
 
 .about-me {
-    padding: 1em 2em;
+    padding: 1rem 2rem;
     color: var(--color-primary);
     background-color: var(--color-secondary);
     border-radius: 5px;
+    margin-top: 3px;
 }
