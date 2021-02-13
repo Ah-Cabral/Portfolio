@@ -1,36 +1,47 @@
-// Define global vars
+// Definindo variáveis globais
 const texts = ['Olá, meu nome é Arthur Cabral...', 'Sou desenvolvedor iniciante...', 'Sou Designer...', 'Sou estudante...'];
 var num = 0;
 var li = 0;
 const h1 = document.querySelector('.typing');
 
-// Main Function
+//Função Type Principal
 function Type(count){
     let phrase = texts[count];
-    let letters = phrase.split(''); // Split the phrase to an array
-    letters.forEach((letras, i) => { // forEach loop to insert the letters into H1
-        li = i  // define li
+
+    let letters = phrase.split(''); // Utilizando split para separar cada caractere da frase
+
+    letters.forEach((letras, i) => { // Utilizando forEach loop para inserir as letras no H1
+
+        li = i  // Definindo li (index)
+
         setTimeout(function() {
             h1.innerHTML += letras;
         }, 75 * i);
+
     });
+
     setTimeout(function() {
+
         if(li = letters.length) { 
-            if(num === texts.length - 1) { // Validate the num parameter for infinite loop animation
+
+            if(num === texts.length - 1) { // Validando o parâmetro num para animação de loop infinito   
                 num = 0
+
             } else {
-                num++ // Increase num value to control what phrase will be returned to Type(val)
+                num++ // Aumentando o valor num para controlar qual frase será retornada ao tipo (val)
             }
-            h1.innerHTML = ''; // Clean h1
-            Change(num); // Call func
+
+            h1.innerHTML = ''; // Limpando H1
+            
+            Change(num); // Chamando a função
         }
     }, 5000);
 };
 
-// Second func call
+// Segunda chamada de função
 function Change(val) {
     Type(val)
 }
 
-// First func call, start Main func
+// Primeira chamada da função, iniciando função principal
 Type(num)
