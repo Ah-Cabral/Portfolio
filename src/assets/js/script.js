@@ -40,8 +40,14 @@ function Type(count){
 
 // Segunda chamada de função
 function Change(val) {
-    Type(val)
-}
+    Type(val);
+};
 
 // Primeira chamada da função, iniciando função principal
-Type(num)
+Type(num);
+
+botao = document.getElementById("botao-about");
+
+botao.addEventListener('mousemove', function piscaArrow(){
+    
+});
