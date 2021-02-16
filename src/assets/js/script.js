@@ -46,8 +46,3 @@ function Change(val) {
 // Primeira chamada da função, iniciando função principal
 Type(num);
 
-botao = document.getElementById("botao-about");
-
-botao.addEventListener('mousemove', function piscaArrow(){
-    
-});
