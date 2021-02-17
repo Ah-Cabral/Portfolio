@@ -87,9 +87,12 @@ function Change(val) {
 // Primeira chamada da função, iniciando função principal
 Type(num);
 
-
+    
 const header = document.getElementsByClassName('main-header')[0];
 const body = document.getElementsByTagName('body')[0];
+const botaoContato = document.getElementById('link-contact');
+
+let link = document.getElementsByClassName('.header-link');
 
 window.onscroll = function() {scrollFunction()};
 
@@ -101,27 +104,25 @@ function scrollFunction() {
     
     header.style.boxShadow = '19px 45px 43px -38px rgba(0,0,0,0.75)';
     
-    header.style.transitionDuration = ".6s"
+    header.style.transitionDuration = ".6s";
 
-    link = document.getElementsByClassName("header-main");
-    for(c = 0; c < link.size; c++){
+    let link = document.querySelectorAll('.header-link');
 
-        link[c].style.color = 'var(-color-primary)'
+    link.style.color = 'var(-color-primary)';
 
-        link[c].addEventListener("mouseover", function muda(){
-            link[c].style.padding = '.5rem 1.5rem'
-            link[c].style.background = '#FFFFFF'
-            link[c].style.color = 'var(-color-secondary)'
-            link[c].style.borderRadius = '10px'
-        })
+    link.addEventListener("mouseover", function muda(){
+        link.style.padding = '.5rem 1.5rem';
+        link.style.background = '#FFFFFF';
+        link.style.color = 'var(-color-secondary)';
+        link.style.borderRadius = '10px';
+    });
     
-        link[c].addEventListener("mouseout", function volta(){
-            link[c].style.padding = '0'
-            link[c].style.background = 'none'
-            link[c].style.color = 'var(-color-secondary)'
-            link[c].style.transitionDuration = ".6s"
-        })
-    }
+    link.addEventListener("mouseout", function volta(){
+        link.style.padding = '0';
+        link.style.background = '#000000';
+        link.style.color = 'var(-color-primary)';
+        link.style.transitionDuration = ".6s";
+    });
     
 
 
