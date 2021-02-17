@@ -20,6 +20,23 @@
     list-style: none;
 }
 
+body{
+    overflow-x: hidden;
+    animation: acende 2s;
+    max-width: 100%;
+}
+
+/*Keyframe para o elemento*/
+@keyframes acende { 
+    0%{/*No início da animação*/
+        opacity: 0;; /*Será iniciada a imagem com um zoom de 30% na imagem*/
+    }
+
+    100%{/*No fim da animação*/
+        opacity: 1;;/*Será iniciada a imagem com o tamanho original*/
+    }
+}
+
 /* personalizar a barra em geral, aqui estou definindo 10px de largura para a barra vertical
 e 10px de altura para a barra horizontal */
 ::-webkit-scrollbar {
@@ -44,7 +61,7 @@ estou colocando uma cor azul clara nela*/
 }
 
 /*Configurando Header Principal*/
-#main-header {
+.main-header {
     width: 100%;
     height: 75px;
     background-color: rgba(0, 0, 0, 0.199);
@@ -52,6 +69,7 @@ estou colocando uma cor azul clara nela*/
     align-items: center;
     justify-content: space-between;
     position: fixed;
+    z-index: 1;
 }
 
 /*Configurando Home*/
@@ -64,7 +82,20 @@ estou colocando uma cor azul clara nela*/
     align-items: center;
     justify-content: center;
     text-align: center;
+    animation: zoom 9s;
 }
+
+/*Keyframe para o elemento*/
+@keyframes zoom { 
+    0%{/*No início da animação*/
+        transform: scale(1.3); /*Será iniciada a imagem com um zoom de 30% na imagem*/
+    }
+
+    100%{/*No fim da animação*/
+        transform: scale(1);/*Será iniciada a imagem com o tamanho original*/
+    }
+}
+
 
 /*Configurando posicionamento do Logo*/
 #logo-header {
@@ -159,7 +190,7 @@ estou colocando uma cor azul clara nela*/
     color: var(--color-primary);
     background-color: var(--color-secondary);
     border-radius: 5px;
-    margin-top: 1.5rem;
+    margin-top: 2rem;
 }
 
 /*Link da About Me*/

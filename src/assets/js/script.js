@@ -46,3 +46,13 @@ function Change(val) {
 // Primeira chamada da função, iniciando função principal
 Type(num);
 
+header = document.getElementsByClassName('main-header')[0];
+body = document.getElementsByTagName('body')[0];
+
+
+header.addEventListener(scroll, function(){
+    if(body.scrollTop() > header.height()){
+        window.alert("oi")
+    }
+});
+
