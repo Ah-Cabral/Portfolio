@@ -22,7 +22,7 @@
 
 body{
     overflow-x: hidden;
-    animation: acende 2s;
+    animation: acende 4s;
     max-width: 100%;
 }
 
@@ -241,4 +241,8 @@ estou colocando uma cor azul clara nela*/
 /*Link da About Me*/
 .about-arrows:hover #logo-abaixo{
     animation: piscando 1.5s infinite ease;
+}
+
+#teste{
+    height: 100vh;
 }

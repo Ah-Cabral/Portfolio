@@ -87,13 +87,46 @@ function Change(val) {
 // Primeira chamada da função, iniciando função principal
 Type(num);
 
-header = document.getElementsByClassName('main-header')[0];
-body = document.getElementsByTagName('body')[0];
 
+const header = document.getElementsByClassName('main-header')[0];
+const body = document.getElementsByTagName('body')[0];
 
-header.addEventListener(scroll, function(){
-    if(body.scrollTop() > header.height()){
-        window.alert("oi")
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+
+  if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+    
+    header.style.background = "#FFB039";
+    
+    header.style.boxShadow = '19px 45px 43px -38px rgba(0,0,0,0.75)';
+    
+    header.style.transitionDuration = ".6s"
+
+    link = document.getElementsByClassName("header-main");
+    for(c = 0; c < link.size; c++){
+
+        link[c].style.color = 'var(-color-primary)'
+
+        link[c].addEventListener("mouseover", function muda(){
+            link[c].style.padding = '.5rem 1.5rem'
+            link[c].style.background = '#FFFFFF'
+            link[c].style.color = 'var(-color-secondary)'
+            link[c].style.borderRadius = '10px'
+        })
+    
+        link[c].addEventListener("mouseout", function volta(){
+            link[c].style.padding = '0'
+            link[c].style.background = 'none'
+            link[c].style.color = 'var(-color-secondary)'
+            link[c].style.transitionDuration = ".6s"
+        })
     }
-});
+    
 
+
+  } else {
+    header.style.background = 'rgba(0, 0, 0, 0.199)';
+  }
+
+}
