@@ -87,13 +87,19 @@ function Change(val) {
 // Primeira chamada da função, iniciando função principal
 Type(num);
 
+//Definindo constantes Globais Para função de Scroll
 const header = document.getElementsByClassName('main-header')[0];
 const body = document.getElementsByTagName('body')[0];
 
-let link = document.getElementsByClassName('.header-link');
-
+//Ativando função scroll ao rolar a página
 window.onscroll = function() {scrollFunction()};
 
+/*
+
+A função Scroll irá verificar a distância do body ao scroll top e com isso
+fará modificações no background, adicionará uma sombra e setará um tempo de 0.6s para isso acontecer
+
+*/
 function scrollFunction() {
 
   if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
