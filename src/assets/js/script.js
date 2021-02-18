@@ -87,10 +87,8 @@ function Change(val) {
 // Primeira chamada da função, iniciando função principal
 Type(num);
 
-    
 const header = document.getElementsByClassName('main-header')[0];
 const body = document.getElementsByTagName('body')[0];
-const botaoContato = document.getElementById('link-contact');
 
 let link = document.getElementsByClassName('.header-link');
 
