@@ -106,26 +106,6 @@ function scrollFunction() {
     
     header.style.transitionDuration = ".6s";
 
-    let link = document.querySelectorAll('.header-link');
-
-    link.style.color = 'var(-color-primary)';
-
-    link.addEventListener("mouseover", function muda(){
-        link.style.padding = '.5rem 1.5rem';
-        link.style.background = '#FFFFFF';
-        link.style.color = 'var(-color-secondary)';
-        link.style.borderRadius = '10px';
-    });
-    
-    link.addEventListener("mouseout", function volta(){
-        link.style.padding = '0';
-        link.style.background = '#000000';
-        link.style.color = 'var(-color-primary)';
-        link.style.transitionDuration = ".6s";
-    });
-    
-
-
   } else {
     header.style.background = 'rgba(0, 0, 0, 0.199)';
   }
