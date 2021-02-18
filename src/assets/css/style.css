@@ -112,11 +112,15 @@ estou colocando uma cor azul clara nela*/
 #links-header a {
     color: var(--color-primary);
     margin: 1rem;
+    transition: all 0.25s;
 }
 
 /*Configurando Links em evento de hover*/
 #links-header a:hover {
+    padding: .5rem 1.5rem;
     color: var(--color-secondary);
+    background-color: var(--color-primary);
+    border-radius: 2px;
     margin: 1rem;
     transition: all 0.25s;
 }
@@ -138,7 +142,6 @@ estou colocando uma cor azul clara nela*/
 }
 
 /*Div introdutória do site*/
-
 #intro {
     display: flex;
     flex-direction: column;
