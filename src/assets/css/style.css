@@ -152,6 +152,7 @@ estou colocando uma cor azul clara nela*/
 /*Div introdutória do site*/
 .text-home{
     display: flex;
+    flex-direction: column;
 }
 
 /*H1 Contendo as frases*/
@@ -170,6 +171,12 @@ estou colocando uma cor azul clara nela*/
     height: 100%;
     border-right: 2px solid var(--color-secondary);
     animation: piscando 0.75s infinite ease;
+}
+
+.subtitle{
+    font-size: .8rem;
+    text-transform: uppercase;
+    animation: piscando 2s infinite ease;
 }
 
 /*Keyframe para o elemento*/
