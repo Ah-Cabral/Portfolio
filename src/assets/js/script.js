@@ -115,3 +115,16 @@ function scrollFunction() {
   }
 
 }
+
+const icones = document.getElementsByClassName
+
+function Efeito(classNome){
+    
+}
+
+$(document).on('mousemove', '.zoom-in', function( event ) {
+    $(".icons").text(event.pageX + ", " + event.pageY);
+    var positionLeft = event.pageX - $(this).width()/2;
+    var positionTop = event.pageY - $(this).height()/2;
+          $(this).css({'left': positionLeft, 'top': positionTop});
+});
