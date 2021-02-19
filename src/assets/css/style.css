@@ -69,7 +69,7 @@ estou colocando uma cor azul clara nela*/
     align-items: center;
     justify-content: space-between;
     position: fixed;
-    z-index: 1;
+    z-index: 100;
 }
 
 /*Configurando Home*/
@@ -149,25 +149,87 @@ estou colocando uma cor azul clara nela*/
     color: var(--color-primary);
 }
 
-#hide-icons{
-    font-size: 5rem;
-    animation: aparece 10s infinite ease;
-    position: relative;
+
+.icons{
+    font-size: 12rem;
+    transition: all 1s;
+    z-index: 1;
+}
+
+.icons:hover{
+    font-size: 18rem;
 }
 
 #css-icon{
+    color: #2965F1;
     position: absolute;
-    left: -500;
+    top: 10rem;
+    left: 8rem;
+    animation: aparece 3s ease;
 }
+
+#js-icon{
+    color: #F7E018;
+    position: absolute;
+    top: 10rem;
+    right: 8rem;
+    animation: aparece2 3s ease;
+}
+
+#react-icon{
+    color: #61DBFB;
+    position: absolute;
+    top: 30rem;
+    right: 6rem;
+    animation: aparece4 3s ease;
+}
+
+#html-icon{
+    color: #F05F2A;
+    position: absolute;
+    top: 30rem;
+    left: 7rem;
+    animation: aparece3 3s ease;
+}
+
+@keyframes aparece4{
+    0%{
+        right: -5rem;
+    }
+    100%{
+        right: 6rem;
+    }
+}
+
+@keyframes aparece3{
+    0%{
+        left: -5rem;
+    }
+    100%{
+        left: 7rem;
+    }
+}
+
+
+@keyframes aparece2{
+    0%{
+        right: -5rem;
+    }
+    100%{
+        right: 8rem;
+    }
+}
+
 
 @keyframes aparece{
     0%{
-        left: -50;
+        left: -5rem;
     }
     100%{
-        left: 50;
+        left: 8rem;
     }
 }
+
 
 /*Div introdutória do site*/
 .text-home{
