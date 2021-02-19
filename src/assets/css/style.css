@@ -149,6 +149,26 @@ estou colocando uma cor azul clara nela*/
     color: var(--color-primary);
 }
 
+#hide-icons{
+    font-size: 5rem;
+    animation: aparece 10s infinite ease;
+    position: relative;
+}
+
+#css-icon{
+    position: absolute;
+    left: -500;
+}
+
+@keyframes aparece{
+    0%{
+        left: -50;
+    }
+    100%{
+        left: 50;
+    }
+}
+
 /*Div introdutória do site*/
 .text-home{
     display: flex;
@@ -251,8 +271,4 @@ estou colocando uma cor azul clara nela*/
 /*Link da About Me*/
 .about-arrows:hover #logo-abaixo{
     animation: piscando 1.5s infinite ease;
-}
-
-#teste{
-    height: 100vh;
 }
