@@ -24,6 +24,7 @@ body{
     overflow-x: hidden;
     animation: acende 3s;
     max-width: 100%;
+    box-sizing: border-box;
 }
 
 /*Keyframe para o elemento*/
@@ -359,4 +360,35 @@ estou colocando uma cor azul clara nela*/
 /*Link da About Me*/
 .about-arrows:hover #logo-abaixo{
     animation: piscando 1.5s infinite ease;
+}
+
+#About-me{
+    width: 100%;
+    height: 100vh;
+}
+
+.content-about-home{
+    display: flex;
+    width: 100%;
+}
+
+.img-about-me{
+    width: 30%;
+}
+
+.img-wrapper{
+    width: 150px;
+    height: 150px;
+    border-radius: 10px;
+}
+
+.img-wrapper img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.info-about-me{
+    width: 70%;
 }
