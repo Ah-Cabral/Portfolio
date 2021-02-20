@@ -5,7 +5,7 @@ Definindo Variáveis Globais:
 */
 
 //A array texts será inserida na função type, terá por objetivo separar as frases presentes nela.
-const texts = ['Olá, meu nome é Arthur Cabral...', 'Sou desenvolvedor iniciante...', 'Sou Designer...', 'Sou estudante...'];
+const texts = ['Olá, Meu Nome é Arthur Cabral...', 'Sou Desenvolvedor Iniciante...', 'Sou Designer...', 'Sou Estudante...'];
 
 //A variável num será o índice das frases presente na função
 var num = 0;
