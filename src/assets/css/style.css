@@ -169,7 +169,7 @@ estou colocando uma cor azul clara nela*/
     position: absolute;
     top: 10rem;
     left: 8rem;
-    animation: aparece 3s ease;
+    animation: apareceCSS 3s ease;
 }
 
 #js-icon{
@@ -177,7 +177,7 @@ estou colocando uma cor azul clara nela*/
     position: absolute;
     top: 10rem;
     right: 8rem;
-    animation: aparece2 3s ease;
+    animation: apareceJS 3s ease;
 }
 
 #react-icon{
@@ -185,7 +185,7 @@ estou colocando uma cor azul clara nela*/
     position: absolute;
     top: 30rem;
     right: 6rem;
-    animation: aparece4 3s ease;
+    animation: apareceReact 3s ease;
 }
 
 #html-icon{
@@ -193,10 +193,10 @@ estou colocando uma cor azul clara nela*/
     position: absolute;
     top: 30rem;
     left: 7rem;
-    animation: aparece3 7s ease;
+    animation: apareceHTML 3s ease;
 }
 
-@keyframes aparece4{
+@keyframes apareceReact{
     0%{
         transform: scale(1.5);
         right: -5rem;
@@ -207,7 +207,7 @@ estou colocando uma cor azul clara nela*/
     }
 }
 
-@keyframes aparece3{
+@keyframes apareceHTML{
     0%{
         transform: scale(1.5);
         left: -5rem;
@@ -218,7 +218,7 @@ estou colocando uma cor azul clara nela*/
     }
 }
 
-@keyframes aparece2{
+@keyframes apareceJS{
     0%{
         transform: scale(1.5);
         right: -5rem;
@@ -229,8 +229,7 @@ estou colocando uma cor azul clara nela*/
     }
 }
 
-
-@keyframes aparece{
+@keyframes apareceCSS{
     0%{
         transform: scale(1.5);
         left: -5rem;
@@ -294,10 +293,12 @@ estou colocando uma cor azul clara nela*/
     background-color: var(--color-secondary);
     border-radius: 5px;
     margin-top: 2rem;
+    transition: all .5s;
 }
 
 /*Link da About Me*/
 .about-me:hover{
+    padding: 1.3rem 4rem;
     color: var(--color-secondary);
     background-color: var(--color-primary);
     transition: all .5s;
