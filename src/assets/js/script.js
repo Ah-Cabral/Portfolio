@@ -100,6 +100,7 @@ A função Scroll irá verificar a distância do body ao scroll top e com isso
 fará modificações no background, adicionará uma sombra e setará um tempo de 0.6s para isso acontecer
 
 */
+
 function scrollFunction() {
 
   if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
@@ -112,19 +113,24 @@ function scrollFunction() {
 
   } else {
     header.style.background = 'rgba(0, 0, 0, 0.199)';
-  }
+  };
 
-}
+};
 
-const icones = document.getElementsByClassName
 
-function Efeito(classNome){
-    
-}
+const icones = document.getElementById('icons-move');
+const home = document.querySelector('#home-section');
 
-$(document).on('mousemove', '.zoom-in', function( event ) {
-    $(".icons").text(event.pageX + ", " + event.pageY);
-    var positionLeft = event.pageX - $(this).width()/2;
-    var positionTop = event.pageY - $(this).height()/2;
-          $(this).css({'left': positionLeft, 'top': positionTop});
-});
+let movementStrength = 60;
+let height = movementStrength / window.innerHeight;
+let width = movementStrength / window.innerWidth;
+home.addEventListener('mousemove', moverIcon);
+function moverIcon(event){;
+    let x = event.offsetX - (window.innerWidth / 2);
+    let y = event.offsetY - (window.innerHeight / 2);
+    let newvalueX = width * x * -1 + 15;
+    let newvalueY = height * y * -1 - 10;
+    icones.style.top = newvalueY +"px";
+    icones.style.left = newvalueX +"px";
+};
+

@@ -22,7 +22,7 @@
 
 body{
     overflow-x: hidden;
-    animation: acende 4s;
+    animation: acende 3s;
     max-width: 100%;
 }
 
@@ -82,8 +82,9 @@ estou colocando uma cor azul clara nela*/
     align-items: center;
     justify-content: center;
     text-align: center;
-    animation: zoom 9s;
+    animation: zoom 4s;
 }
+
 
 /*Keyframe para o elemento*/
 @keyframes zoom { 
@@ -95,7 +96,6 @@ estou colocando uma cor azul clara nela*/
         transform: scale(1);/*Será iniciada a imagem com o tamanho original*/
     }
 }
-
 
 /*Configurando posicionamento do Logo*/
 #logo-header {
@@ -149,6 +149,10 @@ estou colocando uma cor azul clara nela*/
     color: var(--color-primary);
 }
 
+#icons-move{
+    transition: all .5s;
+    position: relative;
+}
 
 .icons{
     font-size: 12rem;
@@ -189,33 +193,38 @@ estou colocando uma cor azul clara nela*/
     position: absolute;
     top: 30rem;
     left: 7rem;
-    animation: aparece3 3s ease;
+    animation: aparece3 7s ease;
 }
 
 @keyframes aparece4{
     0%{
+        transform: scale(1.5);
         right: -5rem;
     }
     100%{
+        transform: scale(1);
         right: 6rem;
     }
 }
 
 @keyframes aparece3{
     0%{
+        transform: scale(1.5);
         left: -5rem;
     }
     100%{
+        transform: scale(1);
         left: 7rem;
     }
 }
 
-
 @keyframes aparece2{
     0%{
+        transform: scale(1.5);
         right: -5rem;
     }
     100%{
+        transform: scale(1);
         right: 8rem;
     }
 }
@@ -223,9 +232,11 @@ estou colocando uma cor azul clara nela*/
 
 @keyframes aparece{
     0%{
+        transform: scale(1.5);
         left: -5rem;
     }
     100%{
+        transform: scale(1);
         left: 8rem;
     }
 }
