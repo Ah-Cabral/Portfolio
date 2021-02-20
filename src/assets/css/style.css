@@ -155,9 +155,11 @@ estou colocando uma cor azul clara nela*/
 }
 
 .icons{
+    color: white;
     font-size: 12rem;
     transition: all 1s;
     z-index: 1;
+    
 }
 
 .icons:hover{
@@ -165,77 +167,89 @@ estou colocando uma cor azul clara nela*/
 }
 
 #css-icon{
-    color: #2965F1;
+    color: #2196F3;
     position: absolute;
     top: 10rem;
     left: 8rem;
     animation: apareceCSS 3s ease;
 }
 
+#css-icon:hover{
+    color: #ffffff;
+    filter: drop-shadow(0 0 0.75rem #2196F3);
+}
+
 #js-icon{
-    color: #F7E018;
+    color: #F0DB4F;
     position: absolute;
     top: 10rem;
     right: 8rem;
     animation: apareceJS 3s ease;
 }
 
+#js-icon:hover{
+    color: #ffffff;
+    filter: drop-shadow(0 0 0.75rem #F0DB4F);
+}
+
 #react-icon{
-    color: #61DBFB;
+    color: #61DAFB;
     position: absolute;
     top: 30rem;
     right: 6rem;
     animation: apareceReact 3s ease;
 }
 
+#react-icon:hover{
+    color: #ffffff;
+    filter: drop-shadow(0 0 0.75rem #61DAFB)
+}
+
 #html-icon{
-    color: #F05F2A;
+    color: #F16529;
     position: absolute;
     top: 30rem;
     left: 7rem;
     animation: apareceHTML 3s ease;
 }
 
+#html-icon:hover{
+    color: #ffffff;
+    filter: drop-shadow(0 0 0.75rem #F16529);
+}
+
 @keyframes apareceReact{
     0%{
-        transform: scale(1.5);
         right: -5rem;
     }
     100%{
-        transform: scale(1);
         right: 6rem;
     }
 }
 
 @keyframes apareceHTML{
     0%{
-        transform: scale(1.5);
         left: -5rem;
     }
     100%{
-        transform: scale(1);
         left: 7rem;
     }
 }
 
 @keyframes apareceJS{
     0%{
-        transform: scale(1.5);
         right: -5rem;
     }
     100%{
-        transform: scale(1);
         right: 8rem;
     }
 }
 
 @keyframes apareceCSS{
     0%{
-        transform: scale(1.5);
         left: -5rem;
     }
     100%{
-        transform: scale(1);
         left: 8rem;
     }
 }

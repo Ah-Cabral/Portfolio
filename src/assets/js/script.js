@@ -8,10 +8,10 @@ Definindo Variáveis Globais:
 const texts = ['Olá, Meu Nome é Arthur Cabral...', 'Sou Desenvolvedor Iniciante...', 'Sou Designer...', 'Sou Estudante...'];
 
 //A variável num será o índice das frases presente na função
-var num = 0;
+let num = 0;
 
 //A variável li será o índice das letras de cada frase presente no forEach
-var li = 0;
+let li = 0;
 
 //A constante h1 será o H1 presente no documento HTML
 const h1 = document.querySelector('.typing');
@@ -117,20 +117,44 @@ function scrollFunction() {
 
 };
 
+//Declarando Constante dos ícones.
+const icones = document.querySelector('#icons-move');
 
-const icones = document.getElementById('icons-move');
+//Declarando Constante referente à Home Section
 const home = document.querySelector('#home-section');
 
-let movementStrength = 60;
+//Declarando variável referente à força do movimento dos ícobes.
+let movementStrength = 85;
+
+//Declarando variável altura.
 let height = movementStrength / window.innerHeight;
+
+//Declarando variável largura.
 let width = movementStrength / window.innerWidth;
+
+//Fazendo a home ouvir o evento de mouvemove, e iniciar a função moverIcon.
 home.addEventListener('mousemove', moverIcon);
+
+/*
+
+Criação da função Mover Icon, que irá fazer o cálculo de x e y,
+e atribuir ao valor do posicionamento dos ícones.
+
+*/
+
 function moverIcon(event){;
+
     let x = event.offsetX - (window.innerWidth / 2);
+
     let y = event.offsetY - (window.innerHeight / 2);
+
     let newvalueX = width * x * -1 + 15;
+    
     let newvalueY = height * y * -1 - 10;
+    
     icones.style.top = newvalueY +"px";
+    
     icones.style.left = newvalueX +"px";
+    
 };
 
