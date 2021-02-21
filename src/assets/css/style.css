@@ -172,12 +172,7 @@ estou colocando uma cor azul clara nela*/
     position: absolute;
     top: 10rem;
     left: 8rem;
-    animation: apareceCSS 3s ease;
-}
-
-#css-icon:hover{
-    color: #ffffff;
-    filter: drop-shadow(0 0 0.75rem #2196F3);
+    animation: apareceCSS 3s ease, mudacorCSS 4s infinite ease;
 }
 
 #js-icon{
@@ -185,12 +180,8 @@ estou colocando uma cor azul clara nela*/
     position: absolute;
     top: 10rem;
     right: 8rem;
-    animation: apareceJS 3s ease;
-}
-
-#js-icon:hover{
-    color: #ffffff;
-    filter: drop-shadow(0 0 0.75rem #F0DB4F);
+    animation: apareceJS 3s ease, mudacorJS 4s infinite ease;
+    
 }
 
 #react-icon{
@@ -198,26 +189,68 @@ estou colocando uma cor azul clara nela*/
     position: absolute;
     top: 30rem;
     right: 6rem;
-    animation: apareceReact 3s ease;
+    animation: apareceReact 3s ease, mudacorReact 4s infinite ease;
 }
 
-#react-icon:hover{
-    color: #ffffff;
-    filter: drop-shadow(0 0 0.75rem #61DAFB)
-}
 
 #html-icon{
     color: #F16529;
     position: absolute;
     top: 30rem;
     left: 7rem;
-    animation: apareceHTML 3s ease;
+    animation: apareceHTML 3s ease, mudacorHTML 4s infinite ease;
 }
 
-#html-icon:hover{
-    color: #ffffff;
-    filter: drop-shadow(0 0 0.75rem #F16529);
+
+@keyframes mudacorCSS{
+    0%{
+        filter: drop-shadow(0 0 10 #1e9aff);
+      }
+    50% {
+        filter: drop-shadow(0 0 20px #1e9aff);
+    }  
+    100%{
+        filter: drop-shadow(0 0 5 #1e9aff);
+    }
 }
+
+@keyframes mudacorHTML{
+    0%{
+        filter: drop-shadow(0 0 10 #ff7135);
+      }
+    50% {
+        filter: drop-shadow(0 0 20px #ff7135);
+    }  
+    100%{
+        filter: drop-shadow(0 0 5 #ff7135);
+    }
+}
+
+@keyframes mudacorJS{
+    0%{
+        filter: drop-shadow(0 0 10 #dce000);
+      }
+    50% {
+        filter: drop-shadow(0 0 20px #e0be00);
+    }  
+    100%{
+        filter: drop-shadow(0 0 5 #dce000);
+    }
+}
+
+@keyframes mudacorReact{
+    0%{
+        filter: drop-shadow(0 0 10 #61DAFB);
+      }
+    50% {
+        filter: drop-shadow(0 0 20px #61DAFB);
+    }  
+    100%{
+        filter: drop-shadow(0 0 5 #61DAFB);
+    }
+
+}
+
 
 @keyframes apareceReact{
     0%{
