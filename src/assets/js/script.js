@@ -33,7 +33,7 @@ function Type(count){
     let letters = phrase.split(''); 
 
     // Utilizando forEach loop para inserir as letras no H1
-    letters.forEach((letras, i) => { 
+    letters.forEach((letras, i) =>{ 
 
         // Definindo li (index)
         li = i  
