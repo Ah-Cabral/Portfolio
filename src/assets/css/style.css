@@ -5,437 +5,435 @@
 
 /*Criando variáveis para as fontes*/
 :root {
-    --font-primary: "Poppins", serif;
-    --font-secondary: "Montserrat", sans-serif;
-    --color-primary: #ffffff;
-    --color-secondary: #ffb039;
+  --font-primary: "Poppins", serif;
+  --font-secondary: "Montserrat", sans-serif;
+  --color-primary: #ffffff;
+  --color-secondary: #ffb039;
 }
 
 /*Configuração base*/
 * {
-    padding: 0;
-    margin: 0;
-    font-family: var(--font-primary);
-    text-decoration: none;
-    list-style: none;
+  padding: 0;
+  margin: 0;
+  font-family: var(--font-primary);
+  text-decoration: none;
+  list-style: none;
 }
 
-body{
-    overflow-x: hidden;
-    animation: acende 3s;
-    max-width: 100%;
-    box-sizing: border-box;
+body {
+  overflow-x: hidden;
+  animation: acende 3s;
+  max-width: 100%;
+  box-sizing: border-box;
 }
 
 /*Keyframe para o elemento*/
-@keyframes acende { 
-    0%{/*No início da animação*/
-        opacity: 0;; /*Será iniciada a imagem com um zoom de 30% na imagem*/
-    }
+@keyframes acende {
+  0% {
+    /*No início da animação*/
+    opacity: 0; /*Será iniciada a imagem com um zoom de 30% na imagem*/
+  }
 
-    100%{/*No fim da animação*/
-        opacity: 1;;/*Será iniciada a imagem com o tamanho original*/
-    }
+  100% {
+    /*No fim da animação*/
+    opacity: 1; /*Será iniciada a imagem com o tamanho original*/
+  }
 }
 
 /* personalizar a barra em geral, aqui estou definindo 10px de largura para a barra vertical
 e 10px de altura para a barra horizontal */
 ::-webkit-scrollbar {
-    width: 10px;
-    height: 10px;
+  width: 10px;
+  height: 10px;
 }
 
 /* aqui é para personalizar o fundo da barra, neste caso estou colocando um fundo cinza escuro*/
 ::-webkit-scrollbar-track {
-    background: rgb(143, 143, 143);
+  background: rgb(143, 143, 143);
 }
 
 /* aqui é a alça da barra, que demonstra a altura que você está na página
 estou colocando uma cor azul clara nela*/
 ::-webkit-scrollbar-thumb {
-    background: var(--color-secondary);
+  background: var(--color-secondary);
 }
 
 /*Alça da barra em evento de click*/
 ::-webkit-scrollbar-thumb:active {
-    background: var(--color-primary);
+  background: var(--color-primary);
 }
 
 /*Configurando Header Principal*/
 .main-header {
-    width: 100%;
-    height: 75px;
-    background-color: rgba(0, 0, 0, 0.199);
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    position: fixed;
-    z-index: 100;
+  width: 100%;
+  height: 75px;
+  background-color: rgba(0, 0, 0, 0.199);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: fixed;
+  z-index: 100;
 }
 
 /*Configurando Home*/
 #home-section {
-    width: 100%;
-    height: 100vh;
-    background: url(../img/bg-home.jpg);
-    background-size: cover;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    animation: zoom 4s;
+  width: 100%;
+  height: 100vh;
+  background: url(../img/bg-home.jpg);
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  animation: zoom 4s;
 }
 
-
 /*Keyframe para o elemento*/
-@keyframes zoom { 
-    0%{/*No início da animação*/
-        transform: scale(1.3); /*Será iniciada a imagem com um zoom de 30% na imagem*/
-    }
+@keyframes zoom {
+  0% {
+    /*No início da animação*/
+    transform: scale(
+      1.3
+    ); /*Será iniciada a imagem com um zoom de 30% na imagem*/
+  }
 
-    100%{/*No fim da animação*/
-        transform: scale(1);/*Será iniciada a imagem com o tamanho original*/
-    }
+  100% {
+    /*No fim da animação*/
+    transform: scale(1); /*Será iniciada a imagem com o tamanho original*/
+  }
 }
 
 /*Configurando posicionamento do Logo*/
 #logo-header {
-    width: 85px;
-    height: 85px;
-    margin-left: 1rem;
+  width: 85px;
+  height: 85px;
+  margin-left: 1rem;
 }
 
 #links-header {
-    display: flex;
+  display: flex;
 }
 
 /*Configurando Links*/
 #links-header a {
-    color: var(--color-primary);
-    margin: 1rem;
-    transition: all 0.25s;
+  color: var(--color-primary);
+  margin: 1rem;
+  transition: all 0.25s;
 }
 
 /*Configurando Links em evento de hover*/
 #links-header a:hover {
-    padding: .5rem 1.5rem;
-    color: var(--color-secondary);
-    background-color: var(--color-primary);
-    border-radius: 2px;
-    margin: 1rem;
-    transition: all 0.25s;
+  padding: 0.5rem 1.5rem;
+  color: var(--color-secondary);
+  background-color: var(--color-primary);
+  border-radius: 2px;
+  margin: 1rem;
+  transition: all 0.25s;
 }
 
 /*Configurando link de contato*/
 #link-contact a {
-    color: var(--color-primary);
-    margin-right: 2rem;
-    padding: 0.5rem;
-    border-radius: 5px;
-    background: var(--color-secondary);
+  color: var(--color-primary);
+  margin-right: 2rem;
+  padding: 0.5rem;
+  border-radius: 5px;
+  background: var(--color-secondary);
 }
 
 /*Configurando link de contato em evento de header*/
 #link-contact a:hover {
-    color: var(--color-secondary);
-    background: var(--color-primary);
-    transition: all 0.25s;
+  color: var(--color-secondary);
+  background: var(--color-primary);
+  transition: all 0.25s;
 }
 
 /*Div introdutória do site*/
 #intro {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    color: var(--color-primary);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: var(--color-primary);
 }
 
-#icons-move{
-    transition: all .5s;
-    position: relative;
+#icons-move {
+  transition: all 0.5s;
+  position: relative;
 }
 
-.icons{
-    color: white;
-    font-size: 12rem;
-    transition: all 1s;
-    z-index: 1;
-    
+.icons {
+  color: white;
+  font-size: 12rem;
+  transition: all 1s;
+  z-index: 1;
 }
 
-.icons:hover{
-    font-size: 18rem;
+.icons:hover {
+  font-size: 18rem;
 }
 
-#css-icon{
-    color: #2196F3;
-    position: absolute;
-    top: 10rem;
-    left: 8rem;
-    animation: apareceCSS 3s ease, mudacorCSS 4s infinite ease;
+#css-icon {
+  color: #2196f3;
+  position: absolute;
+  top: 10rem;
+  left: 8rem;
+  animation: apareceCSS 3s ease, mudacorCSS 4s infinite ease;
 }
 
-#js-icon{
-    color: #F0DB4F;
-    position: absolute;
-    top: 10rem;
-    right: 8rem;
-    animation: apareceJS 3s ease, mudacorJS 4s infinite ease;
-    
+#js-icon {
+  color: #f0db4f;
+  position: absolute;
+  top: 10rem;
+  right: 8rem;
+  animation: apareceJS 3s ease, mudacorJS 4s infinite ease;
 }
 
-#react-icon{
-    color: #61DAFB;
-    position: absolute;
-    top: 30rem;
+#react-icon {
+  color: #61dafb;
+  position: absolute;
+  top: 30rem;
+  right: 6rem;
+  animation: apareceReact 3s ease, mudacorReact 4s infinite ease;
+}
+
+#html-icon {
+  color: #f16529;
+  position: absolute;
+  top: 30rem;
+  left: 7rem;
+  animation: apareceHTML 3s ease, mudacorHTML 4s infinite ease;
+}
+
+@keyframes mudacorCSS {
+  0% {
+    filter: drop-shadow(0 0 10 #1e9aff);
+  }
+  50% {
+    filter: drop-shadow(0 0 20px #1e9aff);
+  }
+  100% {
+    filter: drop-shadow(0 0 5 #1e9aff);
+  }
+}
+
+@keyframes mudacorHTML {
+  0% {
+    filter: drop-shadow(0 0 10 #ff7135);
+  }
+  50% {
+    filter: drop-shadow(0 0 20px #ff7135);
+  }
+  100% {
+    filter: drop-shadow(0 0 5 #ff7135);
+  }
+}
+
+@keyframes mudacorJS {
+  0% {
+    filter: drop-shadow(0 0 10 #dce000);
+  }
+  50% {
+    filter: drop-shadow(0 0 20px #e0be00);
+  }
+  100% {
+    filter: drop-shadow(0 0 5 #dce000);
+  }
+}
+
+@keyframes mudacorReact {
+  0% {
+    filter: drop-shadow(0 0 10 #61dafb);
+  }
+  50% {
+    filter: drop-shadow(0 0 20px #61dafb);
+  }
+  100% {
+    filter: drop-shadow(0 0 5 #61dafb);
+  }
+}
+
+@keyframes apareceReact {
+  0% {
+    right: -5rem;
+  }
+  100% {
     right: 6rem;
-    animation: apareceReact 3s ease, mudacorReact 4s infinite ease;
+  }
 }
 
-
-#html-icon{
-    color: #F16529;
-    position: absolute;
-    top: 30rem;
+@keyframes apareceHTML {
+  0% {
+    left: -5rem;
+  }
+  100% {
     left: 7rem;
-    animation: apareceHTML 3s ease, mudacorHTML 4s infinite ease;
+  }
 }
 
-
-@keyframes mudacorCSS{
-    0%{
-        filter: drop-shadow(0 0 10 #1e9aff);
-      }
-    50% {
-        filter: drop-shadow(0 0 20px #1e9aff);
-    }  
-    100%{
-        filter: drop-shadow(0 0 5 #1e9aff);
-    }
+@keyframes apareceJS {
+  0% {
+    right: -5rem;
+  }
+  100% {
+    right: 8rem;
+  }
 }
 
-@keyframes mudacorHTML{
-    0%{
-        filter: drop-shadow(0 0 10 #ff7135);
-      }
-    50% {
-        filter: drop-shadow(0 0 20px #ff7135);
-    }  
-    100%{
-        filter: drop-shadow(0 0 5 #ff7135);
-    }
+@keyframes apareceCSS {
+  0% {
+    left: -5rem;
+  }
+  100% {
+    left: 8rem;
+  }
 }
-
-@keyframes mudacorJS{
-    0%{
-        filter: drop-shadow(0 0 10 #dce000);
-      }
-    50% {
-        filter: drop-shadow(0 0 20px #e0be00);
-    }  
-    100%{
-        filter: drop-shadow(0 0 5 #dce000);
-    }
-}
-
-@keyframes mudacorReact{
-    0%{
-        filter: drop-shadow(0 0 10 #61DAFB);
-      }
-    50% {
-        filter: drop-shadow(0 0 20px #61DAFB);
-    }  
-    100%{
-        filter: drop-shadow(0 0 5 #61DAFB);
-    }
-
-}
-
-
-@keyframes apareceReact{
-    0%{
-        right: -5rem;
-    }
-    100%{
-        right: 6rem;
-    }
-}
-
-@keyframes apareceHTML{
-    0%{
-        left: -5rem;
-    }
-    100%{
-        left: 7rem;
-    }
-}
-
-@keyframes apareceJS{
-    0%{
-        right: -5rem;
-    }
-    100%{
-        right: 8rem;
-    }
-}
-
-@keyframes apareceCSS{
-    0%{
-        left: -5rem;
-    }
-    100%{
-        left: 8rem;
-    }
-}
-
 
 /*Div introdutória do site*/
-.text-home{
-    display: flex;
-    flex-direction: column;
+.text-home {
+  display: flex;
+  flex-direction: column;
 }
 
 /*H1 Contendo as frases*/
-.typing{
-    position: relative;
-    margin-left: 10px;
-    text-align: center;
-    font-size: 2rem;
+.typing {
+  position: relative;
+  margin-left: 10px;
+  text-align: center;
+  font-size: 2rem;
 }
 
 /*Inserindo Pseudo-Elementos*/
-.typing::after{
-    content: "";
-    position: absolute;
-    width: 1px;
-    height: 100%;
-    border-right: 2px solid var(--color-secondary);
-    animation: piscando 0.75s infinite ease;
+.typing::after {
+  content: "";
+  position: absolute;
+  width: 1px;
+  height: 100%;
+  border-right: 2px solid var(--color-secondary);
+  animation: piscando 0.75s infinite ease;
 }
 
-.subtitle{
-    font-size: .8rem;
-    text-transform: uppercase;
-    animation: piscando 2s infinite ease;
+.subtitle {
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  animation: piscando 2s infinite ease;
 }
 
 /*Keyframe para o elemento*/
-@keyframes piscando{
-    0%{
-        opacity: 0;
-    }
-    100%{
-        opacity: 1;
-    }
+@keyframes piscando {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
-.about-arrows{
-    display: flex;
-    flex-direction: column;
+.about-arrows {
+  display: flex;
+  flex-direction: column;
 }
 
 /*Link da About Me*/
 .about-me {
-    padding: .6rem 3rem;
-    color: var(--color-primary);
-    background-color: var(--color-secondary);
-    border-radius: 5px;
-    margin-top: 2rem;
-    transition: all .5s;
+  padding: 0.6rem 3rem;
+  color: var(--color-primary);
+  background-color: var(--color-secondary);
+  border-radius: 5px;
+  margin-top: 2rem;
+  transition: all 0.5s;
 }
 
 /*Link da About Me*/
-.about-me:hover{
-    padding: 1.3rem 4rem;
-    color: var(--color-secondary);
-    background-color: var(--color-primary);
-    transition: all .5s;
+.about-me:hover {
+  padding: 1.3rem 4rem;
+  color: var(--color-secondary);
+  background-color: var(--color-primary);
+  transition: all 0.5s;
 }
 
 /*Elementos d*/
-.elements{
-    margin-top: 1rem;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    opacity: 0;
+.elements {
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  opacity: 0;
 }
 
-.about-arrows:hover .elements{
-    transition: all 1s;
-    opacity: 1;
+.about-arrows:hover .elements {
+  transition: all 1s;
+  opacity: 1;
 }
 
-.yellow-span{
-    color: var(--color-secondary);
-}
-
-/*Link da About Me*/
-.about-arrows:hover #arrow1{
-    margin-right: 1em;
-    animation: piscando 0.4s infinite ease;
+.yellow-span {
+  color: var(--color-secondary);
 }
 
 /*Link da About Me*/
-.about-arrows:hover #arrow2{
-    margin-right: 1em;
-    color: var(--color-secondary);
-    animation: piscando 0.4s infinite ease;
+.about-arrows:hover #arrow1 {
+  margin-right: 1em;
+  animation: piscando 0.4s infinite ease;
 }
 
 /*Link da About Me*/
-.about-arrows:hover #arrow3{
-    animation: piscando 0.4s infinite ease;
+.about-arrows:hover #arrow2 {
+  margin-right: 1em;
+  color: var(--color-secondary);
+  animation: piscando 0.4s infinite ease;
 }
 
 /*Link da About Me*/
-.about-arrows:hover #logo-abaixo{
-    animation: piscando 1.5s infinite ease;
+.about-arrows:hover #arrow3 {
+  animation: piscando 0.4s infinite ease;
 }
 
-#About-me{
-    width: 100%;
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    text-align: center;
+/*Link da About Me*/
+.about-arrows:hover #logo-abaixo {
+  animation: piscando 1.5s infinite ease;
 }
 
-.content-about-home{
-    display: flex;
-    width: 100%;
-    align-items: center;
-    justify-content: center;
+#About-me {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
 }
 
-.img-and-text{
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 4rem;
+.content-about-home {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
 }
 
-.text-about{
-    display: flex;
-    flex-direction: column;
+.img-and-text {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 4rem;
 }
 
-.img-wrapper{
-    width: 200px;
-    height: 200px;
-    border-radius: 10px;
+.text-about {
+  display: flex;
+  flex-direction: column;
 }
 
-.img-wrapper img{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 10px;
+.img-wrapper {
+  width: 200px;
+  height: 200px;
+  border-radius: 10px;
 }
 
-.text-about{
-    width: 20%;
+.img-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.text-about {
+  width: 20%;
 }
