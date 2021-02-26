@@ -401,25 +401,23 @@ estou colocando uma cor azul clara nela*/
   text-align: center;
 }
 
-.content-about-home {
-  display: flex;
-  width: 100%;
-  align-items: center;
-  justify-content: center;
-}
-
 .img-and-text {
-  width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 4rem;
 }
 
 .text-about {
   display: flex;
   flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
+
+.text-about p{
+  padding: 2rem;
+}
+
 
 .img-wrapper {
   width: 200px;
@@ -436,4 +434,8 @@ estou colocando uma cor azul clara nela*/
 
 .text-about {
   width: 20%;
+}
+
+.icons-about{
+  color: #1e9aff;
 }
