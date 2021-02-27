@@ -280,13 +280,12 @@ body {
     width: 200px;
     height: 200px;
     border-radius: 10px;
-}
-
-.img-wrapper img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 10px;
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-radius: 10px;
+    }
 }
 
 .text-about {
