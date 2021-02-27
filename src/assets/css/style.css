@@ -105,6 +105,15 @@
     left: 8rem;
   }
 }
+/*Keyframe para o elemento*/
+@keyframes piscando {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 /*Configuração base*/
 * {
   padding: 0;
