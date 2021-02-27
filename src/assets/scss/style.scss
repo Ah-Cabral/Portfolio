@@ -257,6 +257,13 @@ body {
     display: flex;
     flex-direction: column;
     text-align: center;
+    padding-top: 3rem;
+}
+
+.title-section {
+    font-size: 2rem;
+    color: $color-secondary;
+    text-transform: uppercase;
 }
 
 .img-and-text {
@@ -276,8 +283,8 @@ body {
 }
 
 .img-wrapper {
-    width: 200px;
-    height: 200px;
+    width: 280px;
+    height: 280px;
     border-radius: 10px;
     img {
         width: 100%;
@@ -288,9 +295,39 @@ body {
 }
 
 .text-about {
-    width: 20%;
+    width: 30%;
+}
+.icons-about {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 2rem;
+    gap: 1rem;
+
+    a {
+        font-size: 2rem;
+        color: #1e9aff;
+        transition: all 0.5s;
+        &:nth-child(2) {
+            margin-top: 3.5px;
+        }
+
+        &:hover {
+            margin-top: -20px;
+        }
+    }
 }
 
-.icons-about {
-    color: #1e9aff;
+.button-site {
+    position: relative;
+    padding: 1rem;
+    background-color: $color-secondary;
+    color: $color-primary;
+    border-radius: 4px;
+    margin: 2rem;
+    transition: all 1s;
+    &:hover {
+        background: linear-gradient(315deg, #ffb836, $color-secondary);
+        cursor: pointer;
+    }
 }
