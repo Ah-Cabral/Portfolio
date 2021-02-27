@@ -1,26 +1,30 @@
 /*Keyframe para Zoom Effect*/
+
 @keyframes zoom {
     0% {
         /*No início da animação*/
-        transform: scale(1.3); /*Será iniciada a imagem com um zoom de 30% na imagem*/
+        transform: scale(1.3);
+        /*Será iniciada a imagem com um zoom de 30% na imagem*/
     }
-
     100% {
         /*No fim da animação*/
-        transform: scale(1); /*Será iniciada a imagem com o tamanho original*/
+        transform: scale(1);
+        /*Será iniciada a imagem com o tamanho original*/
     }
 }
 
 /*Animação para acender tela*/
+
 @keyframes acende {
     0% {
         /*No início da animação*/
-        opacity: 0; /*Será iniciada a imagem com um zoom de 30% na imagem*/
+        opacity: 0;
+        /*Será iniciada a imagem com um zoom de 30% na imagem*/
     }
-
     100% {
         /*No fim da animação*/
-        opacity: 1; /*Será iniciada a imagem com o tamanho original*/
+        opacity: 1;
+        /*Será iniciada a imagem com o tamanho original*/
     }
 }
 
@@ -105,5 +109,16 @@
     }
     100% {
         left: 8rem;
+    }
+}
+
+/*Keyframe para o elemento*/
+
+@keyframes piscando {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
     }
 }
