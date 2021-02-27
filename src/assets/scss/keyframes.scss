@@ -1,0 +1,109 @@
+/*Keyframe para Zoom Effect*/
+@keyframes zoom {
+    0% {
+        /*No início da animação*/
+        transform: scale(1.3); /*Será iniciada a imagem com um zoom de 30% na imagem*/
+    }
+
+    100% {
+        /*No fim da animação*/
+        transform: scale(1); /*Será iniciada a imagem com o tamanho original*/
+    }
+}
+
+/*Animação para acender tela*/
+@keyframes acende {
+    0% {
+        /*No início da animação*/
+        opacity: 0; /*Será iniciada a imagem com um zoom de 30% na imagem*/
+    }
+
+    100% {
+        /*No fim da animação*/
+        opacity: 1; /*Será iniciada a imagem com o tamanho original*/
+    }
+}
+
+@keyframes mudacorCSS {
+    0% {
+        filter: drop-shadow(0 0 10 #1e9aff);
+    }
+    50% {
+        filter: drop-shadow(0 0 20px #1e9aff);
+    }
+    100% {
+        filter: drop-shadow(0 0 5 #1e9aff);
+    }
+}
+
+@keyframes mudacorHTML {
+    0% {
+        filter: drop-shadow(0 0 10 #ff7135);
+    }
+    50% {
+        filter: drop-shadow(0 0 20px #ff7135);
+    }
+    100% {
+        filter: drop-shadow(0 0 5 #ff7135);
+    }
+}
+
+@keyframes mudacorJS {
+    0% {
+        filter: drop-shadow(0 0 10 #dce000);
+    }
+    50% {
+        filter: drop-shadow(0 0 20px #e0be00);
+    }
+    100% {
+        filter: drop-shadow(0 0 5 #dce000);
+    }
+}
+
+@keyframes mudacorReact {
+    0% {
+        filter: drop-shadow(0 0 10 #61dafb);
+    }
+    50% {
+        filter: drop-shadow(0 0 20px #61dafb);
+    }
+    100% {
+        filter: drop-shadow(0 0 5 #61dafb);
+    }
+}
+
+@keyframes apareceReact {
+    0% {
+        right: -5rem;
+    }
+    100% {
+        right: 6rem;
+    }
+}
+
+@keyframes apareceHTML {
+    0% {
+        left: -5rem;
+    }
+    100% {
+        left: 7rem;
+    }
+}
+
+@keyframes apareceJS {
+    0% {
+        right: -5rem;
+    }
+    100% {
+        right: 8rem;
+    }
+}
+
+@keyframes apareceCSS {
+    0% {
+        left: -5rem;
+    }
+    100% {
+        left: 8rem;
+    }
+}
