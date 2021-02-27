@@ -25,7 +25,7 @@ $color-secondary: #ffb039;
 //Configurando body
 body {
     overflow-x: hidden;
-    animation: acende 3s;
+    animation: acende 1.5s;
     max-width: 100%;
     box-sizing: border-box;
 }
@@ -256,8 +256,9 @@ body {
     height: 100vh;
     display: flex;
     flex-direction: column;
+    align-items: center;
     text-align: center;
-    padding-top: 3rem;
+    padding-top: 1rem;
 }
 
 .title-section {
@@ -267,9 +268,11 @@ body {
 }
 
 .img-and-text {
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
+    gap: 1rem;
 }
 
 .text-about {
@@ -278,13 +281,14 @@ body {
     align-items: center;
     justify-content: center;
     p {
-        padding: 2rem;
+        padding: 1rem;
+        margin-top: 2rem;
     }
 }
 
 .img-wrapper {
-    width: 280px;
-    height: 280px;
+    width: 300px;
+    height: 300px;
     border-radius: 10px;
     img {
         width: 100%;
@@ -295,8 +299,31 @@ body {
 }
 
 .text-about {
-    width: 30%;
+    width: 40%;
+    p {
+        font-size: 0.85rem;
+    }
+    span.line {
+        height: 1px;
+        width: 90%;
+        background-color: $color-secondary;
+        margin: 1rem;
+        &.top {
+            width: 95%;
+        }
+    }
 }
+
+#info-about {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5px;
+    text-align: center;
+    div {
+        padding: 1rem;
+    }
+}
+
 .icons-about {
     display: flex;
     align-items: center;
