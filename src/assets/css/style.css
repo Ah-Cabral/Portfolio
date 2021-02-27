@@ -291,15 +291,6 @@ body {
   animation: piscando 2s infinite ease;
 }
 
-/*Keyframe para o elemento*/
-@keyframes piscando {
-  0% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 1;
-  }
-}
 .about-arrows {
   display: flex;
   flex-direction: column;
