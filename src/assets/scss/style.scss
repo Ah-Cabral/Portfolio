@@ -1,10 +1,11 @@
 /*Importando FontAwesome*/
+
 @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css");
+
 /*Importando Fontes*/
+
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&family=Poppins:wght@400;500;600&display=swap");
-
 @import "./keyframes.scss";
-
 //Definindo variáveis em SCSS
 $font-primary: "Poppins", serif;
 $font-secondary: "Montserrat", sans-serif;
@@ -12,6 +13,7 @@ $color-primary: #ffffff;
 $color-secondary: #ffb039;
 
 /*Configuração base*/
+
 * {
     padding: 0;
     margin: 0;
@@ -63,6 +65,7 @@ body {
 }
 
 /*Configurando Header Principal*/
+
 .main-header {
     width: 100%;
     height: 75px;
@@ -75,6 +78,7 @@ body {
 }
 
 /*Configurando Home*/
+
 #home-section {
     width: 100%;
     height: 100vh;
@@ -88,6 +92,7 @@ body {
 }
 
 /*Configurando posicionamento do Logo*/
+
 #logo-header {
     width: 85px;
     height: 85px;
@@ -95,6 +100,7 @@ body {
 }
 
 /*Configurando link de contato*/
+
 #link-contact a {
     color: $color-primary;
     margin-right: 2rem;
@@ -109,6 +115,7 @@ body {
 }
 
 /*Div introdutória do site*/
+
 #intro {
     display: flex;
     flex-direction: column;
@@ -130,6 +137,7 @@ body {
         font-size: 18rem;
     }
 }
+
 #css-icon {
     color: #2196f3;
     position: absolute;
@@ -168,6 +176,7 @@ body {
 }
 
 /*H1 Contendo as frases*/
+
 .typing {
     position: relative;
     margin-left: 10px;
@@ -187,16 +196,6 @@ body {
     font-size: 0.8rem;
     text-transform: uppercase;
     animation: piscando 2s infinite ease;
-}
-
-/*Keyframe para o elemento*/
-@keyframes piscando {
-    0% {
-        opacity: 0;
-    }
-    100% {
-        opacity: 1;
-    }
 }
 
 .about-arrows {
