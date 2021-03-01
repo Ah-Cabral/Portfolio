@@ -121,13 +121,13 @@
   font-family: "Poppins", serif;
   text-decoration: none;
   list-style: none;
+  box-sizing: border-box;
 }
 
 body {
   overflow-x: hidden;
   animation: acende 1.5s;
   max-width: 100%;
-  box-sizing: border-box;
 }
 
 #links-header {

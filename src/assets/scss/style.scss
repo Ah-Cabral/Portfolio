@@ -20,6 +20,7 @@ $color-secondary: #ffb039;
     font-family: $font-primary;
     text-decoration: none;
     list-style: none;
+    box-sizing: border-box;
 }
 
 //Configurando body
@@ -27,7 +28,6 @@ body {
     overflow-x: hidden;
     animation: acende 1.5s;
     max-width: 100%;
-    box-sizing: border-box;
 }
 
 //Configurando os links da header
