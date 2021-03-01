@@ -426,7 +426,7 @@ body {
 }
 .icons-about a {
   font-size: 2rem;
-  color: #1e9aff;
+  color: #ffb039;
   transition: all 0.5s;
 }
 .icons-about a:nth-child(2) {
@@ -448,4 +448,13 @@ body {
 .button-site:hover {
   background: linear-gradient(315deg, #ffb836, #ffb039);
   cursor: pointer;
+}
+
+#Skills {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
 }
