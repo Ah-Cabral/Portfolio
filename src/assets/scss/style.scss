@@ -333,7 +333,7 @@ body {
 
     a {
         font-size: 2rem;
-        color: #1e9aff;
+        color: $color-secondary;
         transition: all 0.5s;
         &:nth-child(2) {
             margin-top: 3.5px;
@@ -357,4 +357,13 @@ body {
         background: linear-gradient(315deg, #ffb836, $color-secondary);
         cursor: pointer;
     }
+}
+
+#Skills {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
 }
